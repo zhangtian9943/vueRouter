@@ -45,7 +45,7 @@ export default {
 			}
 			this.infoData = infoChange.join('|')
 			this.characterData = characterChaneg.join('|')
-			this.skillData = skillChange.join('|')			
+			this.skillData = skillChange.join('|')
 		},
 		clearState() {
 			for (const val in this.info) {
