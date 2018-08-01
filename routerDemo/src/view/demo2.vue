@@ -1,13 +1,52 @@
 <template>
 	<div>
-		demo2
+		<h3>人物详情</h3>
+		<el-button @click="viewInfo" size="small">查看</el-button>
+		<el-button @click="goBack" size="small">上一页</el-button>
+		<p>mapGetters取出仓库state中的数据</p>
+		<div>
+			<span>姓名：{{query.name}}</span><br>
+			<span>性别：{{query.sex}}</span><br>
+			<span>年龄：{{query.age}}</span><br>
+			<span>职业：{{query.professional}}</span><br>
+			<span>帮派：{{query.gang}}</span>
+		</div>
+		<div>
+			<span>技能：{{skill}}</span>
+		</div>
 	</div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
 	data () {
 		return {
-			
+			query: {
+				name: '',
+				sex: '',
+				age: '',
+				professional: '',
+				gang: ''
+			},
+			skill: ''
+		}
+	},
+	computed: {
+		...mapGetters(['character', 'skills'])
+	},
+	methods: {
+		viewInfo() {
+			this.query = this.character
+			let dataSkill = []
+			for (const val in this.skills) {
+				dataSkill.push(this.skills[val])
+				console.log(this.skills[val])
+			}
+			this.skill = dataSkill.join()
+			console.log(dataSkill)
+		},
+		goBack() {
+			history.back(-1)
 		}
 	}
 }

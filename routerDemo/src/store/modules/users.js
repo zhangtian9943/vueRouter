@@ -4,7 +4,8 @@ const users = {
 		info: {
 			name: '',
 			password: ''
-		}		
+		},
+		test: '11111'	
 	},
 	mutations: {
 		SET_INFO: (state, info) => {
@@ -17,3 +18,5 @@ const users = {
 		}
 	}
 }
+
+export default users

@@ -4,14 +4,14 @@ const one = {
 			name: '',
 			age: '',
 			sex: '',
-			tall: '',
-			weight: ''
+			professional: '',
+			gang: ''
 		},
 		skills: {
-			one: '冰雨寒霜',
-			two: '如来神掌',
-			three: '无影脚',
-			four: '天崩地裂'
+			one: '',
+			two: '',
+			three: '',
+			four: ''
 
 			// one: '',
 			// two: '',
@@ -36,3 +36,5 @@ const one = {
 		}
 	}
 }
+
+export default one
