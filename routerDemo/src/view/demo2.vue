@@ -4,6 +4,7 @@
 		<el-button @click="viewInfo" size="small">查看</el-button>
 		<el-button @click="goBack" size="small">上一页</el-button>
 		<p>mapGetters取出仓库state中的数据</p>
+		<span>用户名：{{userID}}</span>
 		<div>
 			<span>姓名：{{query.name}}</span><br>
 			<span>性别：{{query.sex}}</span><br>
@@ -14,11 +15,20 @@
 		<div>
 			<span>技能：{{skill}}</span>
 		</div>
+		<p>
+			最初想法是直接从state中获取数据DOM渲染 不用再写事件触发，但没有找到好的方法实现
+		</p><br><br><br>
+		<Test>
+		</Test>
 	</div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import Test from '../components/test1'
 export default {
+	components: {
+		Test
+	},
 	data () {
 		return {
 			query: {
@@ -28,15 +38,18 @@ export default {
 				professional: '',
 				gang: ''
 			},
-			skill: ''
+			skill: '',
+			userID: ''
 		}
 	},
 	computed: {
-		...mapGetters(['character', 'skills'])
+		...mapGetters(['character', 'skills', 'info'])
 	},
 	methods: {
+		// 显示人物详情
 		viewInfo() {
-			this.query = this.character
+			this.userID = this.info.name
+			this.query = this.character			
 			let dataSkill = []
 			for (const val in this.skills) {
 				dataSkill.push(this.skills[val])
