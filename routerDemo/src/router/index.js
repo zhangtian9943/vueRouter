@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import dashbord from '@/view/dashbord/index'
 import demo1 from '@/view/demo1'
 import demo2 from '@/view/demo2'
+import problem from '@/view/problem'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/demo2',
       name: 'demo2',
       component: demo2
+    },
+    {
+      path: '/problem',
+      name: 'problem',
+      component: problem
     }
   ]
 })

@@ -8,17 +8,24 @@
 			<el-input v-model="query.password" placeholder="密码" type="passWord"></el-input>
 		</el-col>
 		<el-button @click="login">登录</el-button>
+		<dialog-drag>
+		</dialog-drag>
 	</div>
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import DialogDrag from '../../components/dialogDrag'
 export default {
+	name: 'dashbord',
+	components: {
+		DialogDrag
+	},
 	data () {
 		return {
 			query: {
 				name: '',
-				password: ''
-			}
+				password: '',				
+			},
 		}
 	},
 	computed: {
@@ -33,7 +40,10 @@ export default {
 			this.addInfo(this.query)
 			this.$router.push(`/demo1`)
 			console.log(this.info)
-		}
+		},
+		// btnDialog() {
+		// 	this.showDialog = true
+		// }
 	}
 }
 </script>
