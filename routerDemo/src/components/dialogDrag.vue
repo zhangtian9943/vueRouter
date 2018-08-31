@@ -52,7 +52,6 @@ export default {
 			// // this.$refs.dialogName.style.width = '70%'
 			// console.log(this.$refs.dialogName.style.width)
 			// console.log(this.$refs.dialogName.style)
-			// console.log('111')
 			this.widthName = 'width: 80%'
 			console.log(this.$refs.dialogName.style.width)
 		}
