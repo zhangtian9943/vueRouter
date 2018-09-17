@@ -5,6 +5,7 @@ import dashbord from '@/view/dashbord/index'
 import demo1 from '@/view/demo1'
 import demo2 from '@/view/demo2'
 import problem from '@/view/problem'
+import jqueryTest from '@/view/jqueryTest'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/problem',
       name: 'problem',
       component: problem
+    },
+    {
+      path: '/jquery',
+      name: 'jqueryTest',
+      component: jqueryTest
     }
   ]
 })

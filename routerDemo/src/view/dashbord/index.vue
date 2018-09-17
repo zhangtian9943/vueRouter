@@ -1,15 +1,21 @@
 <template>
 	<div>
-		<h3>剑侠奇缘</h3>
-		<el-col :span="4">
-			<el-input v-model="query.name" placeholder="登录名"></el-input>
-		</el-col>
-		<el-col :span="4">
-			<el-input v-model="query.password" placeholder="密码" type="passWord"></el-input>
-		</el-col>
-		<el-button @click="login">登录</el-button>
-		<dialog-drag>
-		</dialog-drag>
+		<el-row>
+			<el-form>				
+					<el-form-item label="111">
+						<el-col :span="4">
+							<el-form-item>
+								<el-input placeholder="shuru"></el-input>
+							</el-form-item>						
+						</el-col>
+						<el-col :span="4">
+							<el-form-item label="2222">
+								<el-input placeholder="shuru"></el-input>
+							</el-form-item>
+						</el-col>
+					</el-form-item>				
+			</el-form>
+		</el-row>
 	</div>
 </template>
 <script>
